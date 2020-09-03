@@ -3,5 +3,8 @@ Rails.application.routes.draw do
     get "/prompts" => "prompts#index"
     post "/prompts" => "prompts#create"
     get "/prompts/:id" => "prompts#show"
+    patch "prompts/:id" => "prompts#update"
+    delete "prompts/:id" => "prompts#destroy"
+
   end
 end
