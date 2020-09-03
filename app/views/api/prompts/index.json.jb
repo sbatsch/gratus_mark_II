@@ -1,0 +1,7 @@
+@prompts.map do |prompt|
+  {
+    id: prompt.id,
+    content: prompt.content,
+    topic: prompt.topic
+  }
+end 
