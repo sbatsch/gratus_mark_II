@@ -9,8 +9,11 @@ class Api::PromptsController < ApplicationController
                          content: params[:content],
                          topic: params[:topic].to_i                      
                         )
-    @prompt.save
-    render 'show.json.jb'
+    if @prompt.save
+      render 'show.json.jb'
+    else
+      render json: { error: @prompt.errors.full_messages }, status: :unprocessable_entity
+    end 
   end 
 
   def show
@@ -24,8 +27,11 @@ class Api::PromptsController < ApplicationController
     @prompt.content = params[:content] || @prompt.content
     @prompt.topic = params[:topic].to_i || @prompt.topic
 
-    @prompt.save
-    render 'show.json.jb'
+    if @prompt.save
+      render 'show.json.jb'
+    else
+      render json: { error: @prompt.errors.full_messages }, status: :unprocessable_entity
+    end
   end 
 
   def destroy
