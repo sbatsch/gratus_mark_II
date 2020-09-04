@@ -1,5 +1,1 @@
-{
-  id: @prompt.id,
-  content: @prompt.content,
-  topic: @prompt.topic
-}
+render partial: 'prompt.json.jb', locals: {prompt: @prompt}
