@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
+    post '/users' => "users#create"
+
+
     get "/prompts" => "prompts#index"
     post "/prompts" => "prompts#create"
     get "/prompts/:id" => "prompts#show"
