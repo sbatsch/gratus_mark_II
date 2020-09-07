@@ -5,5 +5,5 @@
   date: reflection.date,
   body: reflection.body,
   gratitude_level: reflection.gratitude_level,
-  gratitude_change: reflection.gratitude_level,
+  gratitude_change: reflection.gratitude_change,
 }

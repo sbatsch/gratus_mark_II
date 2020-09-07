@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     post "/sessions" => "sessions#create"
 
     get "/reflections" => "reflections#index"
-
+    post "/reflections" => "reflections#create"
     get "/reflections/:id" => "reflections#show"
 
     
