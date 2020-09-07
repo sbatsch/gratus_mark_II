@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
     get "/reflections" => "reflections#index"
 
+    get "/reflections/:id" => "reflections#show"
+
     
     get "/prompts" => "prompts#index"
     post "/prompts" => "prompts#create"

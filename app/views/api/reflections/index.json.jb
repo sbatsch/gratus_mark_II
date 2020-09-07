@@ -1,11 +1,3 @@
 @reflections.map do |reflection|
-{
-  id: reflection.id,
-  prompt_id: reflection.prompt.id,
-  author: reflection.user.name,
-  date: reflection.date,
-  body: reflection.body,
-  gratitude_level: reflection.gratitude_level,
-  gratitude_change: reflection.gratitude_level,
-}
+  render partial: 'reflection.json.jb', locals: {reflection: reflection}
 end 

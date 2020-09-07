@@ -6,5 +6,10 @@ class Api::ReflectionsController < ApplicationController
     render 'index.json.jb'
   end
 
+  def show
+    @reflection = Reflection.find(params[:id])
+    render 'show.json.jb'
+  end 
+
   
 end
