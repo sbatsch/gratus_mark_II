@@ -27,3 +27,8 @@
 #   {content: "Write about three things that you love about the town, area, or neighborhood you live in?", topic: "nature"},
 #   {content: "Write about a time when a friend was there for you. What does that person mean to you, and how has your life been better with them in it?", topic: "people"}
 # ])
+
+# Reflection.create!([
+#   {prompt_id: 1, user_id: 1, date: Time.now, body: "My Father is very stubborn, but in talking with him I've learned to become more patient and tolerant.", gratitude_level: 10, gratitude_change: 2},
+#   {prompt_id: 5, user_id: 1, date: Time.now, body: "I'm grateful for my mother because she has taught me to what unconditional love is and how to love others unconditionally.", gratitude_level: 10, gratitude_change: 2}
+# ])

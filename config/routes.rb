@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
     post "/sessions" => "sessions#create"
 
+    get "/reflections" => "reflections#index"
+
+    
     get "/prompts" => "prompts#index"
     post "/prompts" => "prompts#create"
     get "/prompts/:id" => "prompts#show"
