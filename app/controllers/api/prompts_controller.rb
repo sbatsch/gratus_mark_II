@@ -1,4 +1,6 @@
 class Api::PromptsController < ApplicationController
+  before_action :authenticate_user
+
   def index
     @prompts = Prompt.all
     render "index.json.jb"

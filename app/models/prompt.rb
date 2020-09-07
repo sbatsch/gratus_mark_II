@@ -1,4 +1,7 @@
 class Prompt < ApplicationRecord
+  has_many :reflections
+  has_many :users, through: :reflections
+
   validates :topic, presence: true
   validates :topic, numericality:  { only_integer: true }
   validates :content, presence: true

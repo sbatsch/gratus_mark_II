@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_06_172355) do
+ActiveRecord::Schema.define(version: 2020_09_07_155048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,17 @@ ActiveRecord::Schema.define(version: 2020_09_06_172355) do
   create_table "prompts", force: :cascade do |t|
     t.text "content"
     t.integer "topic"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reflections", force: :cascade do |t|
+    t.integer "prompt_id"
+    t.integer "user_id"
+    t.date "date"
+    t.text "body"
+    t.integer "gratitude_level"
+    t.integer "gratitude_change"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
