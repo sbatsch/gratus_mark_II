@@ -7,13 +7,14 @@ Rails.application.routes.draw do
     get "/reflections" => "reflections#index"
     post "/reflections" => "reflections#create"
     get "/reflections/:id" => "reflections#show"
+    patch "/reflections/:id" => "reflections#update"
+    delete "/reflections/:id" => "reflections#destroy"
 
-    
     get "/prompts" => "prompts#index"
     post "/prompts" => "prompts#create"
     get "/prompts/:id" => "prompts#show"
-    patch "prompts/:id" => "prompts#update"
-    delete "prompts/:id" => "prompts#destroy"
+    patch "/prompts/:id" => "prompts#update"
+    delete "/prompts/:id" => "prompts#destroy"
     
   end
 end
