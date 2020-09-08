@@ -1,6 +1,7 @@
 {
   id: reflection.id,
   prompt_id: reflection.prompt.id,
+  prompt: reflection.prompt.content,
   author: reflection.user.name,
   date: reflection.date,
   body: reflection.body,
